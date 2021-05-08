@@ -70,7 +70,7 @@ export default class TextMarquee extends PureComponent {
     scrollSpeed:       150,
     bouncePadding:     undefined,
     bounceDelay: 0,
-    shouldAnimateTreshold: 1000,
+    shouldAnimateTreshold: 0,
     disabled:          false,
     isRTL:             undefined
   }
