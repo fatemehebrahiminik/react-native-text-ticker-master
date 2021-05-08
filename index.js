@@ -207,14 +207,14 @@ export default class TextMarquee extends PureComponent {
     this.setTimeout(() => {
       Animated.sequence([
         Animated.timing(this.animatedValue, {
-          toValue:         rtl ? this.distance + (bounceEndPadding + 10) : -this.distance - (bounceEndPadding + 10),
+          toValue:         rtl ? this.distance + (bounceEndPadding || 10) : -this.distance - (bounceEndPadding || 10),
           duration:        duration || (this.distance) * bounceSpeed,
           easing:          easing,
           isInteraction:   isInteraction,
           useNativeDriver: useNativeDriver
         }),
         Animated.timing(this.animatedValue, {
-          toValue:         rtl ? -(bounceStartPadding + 10) : bounceStartPadding + 10,
+          toValue:         rtl ? -(bounceStartPadding || 10) : bounceStartPadding || 10,
           duration:        duration || (this.distance) * bounceSpeed,
           easing:          easing,
           isInteraction:   isInteraction,
